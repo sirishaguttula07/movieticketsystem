@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎬 Movie Ticket Booking</h1>
+
+    <form action="/book" method="post">
+
+        <label>Enter Age:</label>
+        <input type="number" name="age" required>
+
+        <label>Are you a Student?</label>
+        <select name="is_student" required>
+            <option value="True">Yes</option>
+            <option value="False">No</option>
+        </select>
+
+        <label>Select Movie Type:</label>
+        <select name="movie_type" required>
+            <option value="Normal">Normal</option>
+            <option value="3D">3D</option>
+            <option value="IMAX">IMAX</option>
+        </select>
+
+        <label>Select Day:</label>
+        <select name="day" required>
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+            <option value="7">Sunday</option>
+        </select>
+
+        <button type="submit">🎟 Book Ticket</button>
+
+    </form>
+</div>
+
+</body>
+</html>
